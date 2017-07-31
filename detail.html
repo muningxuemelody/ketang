@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link href="img/favorite.ico" rel="shortcut icon" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+		<meta charset="utf-8" />
+		<title>详情页</title>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/detail.css" />
+		<script src="js/touch.js"></script>
+		<script src="js/zepto.js"></script>
+		<style>
+			
+		</style>
+	</head>
+	<body>
+	
+		<div id="detail-container">
+				<div class="zhengzhao1"></div>
+			<div class="bigPic">
+				<img src="images/bigPic.gif" alt="" />
+			</div>
+			<div class="messageBox">
+				<div class="describe">	
+				<div class="title">
+					<h4>主题演讲活动 | 站在互联网时代的风口浪尖</h4>
+					<p>￥ &nbsp;50</p>
+				</div>
+					<ul class="Venue">
+						<li class="top">
+							<div class="left">
+								<span></span>5月23日 周一 12:30-13:30
+							</div>
+							<div class="right">
+								<span></span>
+							</div>
+						</li>
+						<li>
+							<div class="left">
+								<span></span>如是大阶梯
+							</div>
+							<div class="right">
+								<span></span>
+							</div>
+						</li>
+						<li class="bottom">
+							<div class="left">
+								<span></span>已报名344人/限400人报名
+							</div>
+							<div class="right">
+								<span></span>
+							</div>
+						</li>
+					</ul>
+					
+				</div>
+				<div class="Distinguished">
+						<div class="top">嘉宾介绍</div>
+						<div class="center">
+							
+							<div class="picture">
+								<div class="pictureOne">
+									<img src="images/pic4.png" alt="" />
+								</div>
+								
+							</div>
+							<div class="pictureTwo">
+								<p>孟克</p>
+								<p>
+									百度问咖2016年度金咖|百度BIT技术学院金牌讲师
+									百度金融fintech业务拓展负责人
+								</p>
+								
+							</div>
+							
+						</div>
+						
+				</div>
+				<div class="jiabinBottom">
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+				</div>
+				<div class="eventPresentation">
+					<div class="partOne">
+						活动介绍
+					</div>
+					<div class="partTnwo">
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+					</div>
+					<div class="computer">
+						<img src="images/computer.png" alt="" />
+					</div>
+					<div class="partLast">
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+						百度问咖2016年度金咖，百度BIT技术学院金牌讲师，百度金融fintech业务拓展负责人。
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		<footer>
+			<div class="zhengzhao2"></div>
+			<ul>
+				<li class="selected" id="selected">
+					<a href="#"><span></span>
+					收藏</a>
+				</li>
+				
+			
+				<li>
+					<a><span></span>
+					分享</a>
+				</li>
+				<li>立即购买</li>
+			</ul>
+		</footer>
+	</body>
+	<script type="text/javascript">
+			var storage = window.sessionStorage;
+			var xqStorage = storage.getItem("activeCon");
+			console.log(xqStorage)
+			$.getJSON("js/index1.json", function(data) {
+				console.log(data)
+				$.each(data, function(index, data) {
+					console.log(data)
+					if(xqStorage == data.id){
+//						alert(data.huodong1)
+						console.log("成功了")
+					}
+				})
+				
+		})
+			
+			
+		function tishi(content, url) {
+			var html = '<div class="xiaoxi none" id="msg" style="display: flex;flex-direction: column;height:1.5rem;background:#4D4D4D;z-index:9999;left: 5%;width: 90%;border-radius: 30px;position: fixed;padding: 0.5rem;top:35%;opacity: 0.8;"> <p class="msg" style="color: #fff;text-align: center;font-size: 0.24rem;"></p></div>';
+			$(document.body).append(html);
+			$("#msg").show();
+			$(".msg").html(content);
+			if(url) {
+				window.setTimeout("location.href='" + url + "'", 3500);
+			} else {
+				setTimeout(function(){
+					$("#msg").remove();
+					$(".zhengzhao1").css("display","none");
+					$(".zhengzhao2").css("display","none");
+				}, 1500);
+			}
+		}
+		var signUp1 = document.getElementById("selected")
+		
+			touchEvent.tap(signUp1, function() {
+				$(".zhengzhao1").css("display","block");
+				$(".zhengzhao2").css("display","block");
+				tishi('预约成功');
+			})
+		
+	</script>
+</html>

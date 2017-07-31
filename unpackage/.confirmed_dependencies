@@ -1,0 +1,38 @@
+{
+	"index.html": {
+		"resources": [
+			"css/index.css",
+			"images/pic1.png",
+			"images/icon_loc.png",
+			"images/img1.png",
+			"images/pic3.png",
+			"js/zepto.js",
+			"images/icon_search.png",
+			"css/bundle.css",
+			"images/more.png",
+			"js/touch.min.js",
+			"detail.html",
+			"js/touch.js",
+			"images/close.gif",
+			"js/index1.json"
+		],
+		"refer": [
+			"detail.html"
+		]
+	},
+	"detail.html": {
+		"resources": [
+			"images/computer.png",
+			"images/bigPic.gif",
+			"images/pic4.png",
+			"images/icon_collect.png",
+			"images/icon_adr.png",
+			"images/icon_gro.png",
+			"images/icon_time.png",
+			"images/icon_share.png",
+			"css/detail.css",
+			"images/moreicon.png",
+			"css/bundle.css"
+		]
+	}
+}

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>主页</title>
+
+		<script src="js/touch.js"></script>
+		<!--<script src="js/touch.min.js"></script>-->
+		<script src="js/zepto.js"></script>
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<!--<div id="alertBox">
+			<div class="alertMse">
+							
+			</div>
+		</div>-->
+		<div class="m-index">
+			<header>
+				<ul>
+					<li class="yo-ico">
+						<img src="images/icon_loc.png" alt="" />
+						<span>北京</span>
+					</li>
+					<li>
+						<div>
+							<span><img src="images/icon_search.png" alt=""></span>
+							<input type="text" value="请搜索你想要的活动" />
+						</div>
+
+					</li>
+
+				</ul>
+			</header>
+			<section>
+				<ul class="nav" id="nav">
+					<div class="nav-div">
+						<li class="AAA">崂山店<span><img src="images/close.gif" alt=""></span></li>
+						<li>时间<span><img src="images/close.gif" alt=""></span></li>
+						<li>类型<span><img src="images/close.gif" alt=""></span></li>
+					</div>
+
+				</ul>
+
+				<ul class="container">
+					<div class="zhengzhao1"></div>
+					<li class="firstBox">
+						<div class="Drop-downBox">
+							<!--<ul>
+									<li class="allActivity"><a href="#">全部</a></li>
+									<li><a href="#">活动</a></li>
+									<li><a href="#">活动</a></li>
+									<li class="last"><a href="#">活动</a></li>
+								
+							</ul>
+							<ul>
+									<li><a href="#">全部</a></li>
+									<li><a href="#">活动</a></li>
+									<li><a href="#">活动</a></li>
+									<li class="last"><a href="#">活动</a></li>
+								</ul>
+								<ul>
+									<li><a href="#">全部</a></li>
+									<li><a href="#">活动</a></li>
+									<li><a href="#	">活动</a></li>
+									<li class="last"><a href="#">活动</a></li>
+								</ul>-->
+						</div>
+
+						<div class="first-top">
+							<div class="first-topLeft">
+								<img src="images/pic1.png" alt="">
+							</div>
+							<div class="first-topRight">
+								<h4>
+            主题演讲活动|站在互联网时代的...
+          </h4>
+								<p class="p1">站在时代的风口浪尖,谁将会是那只能够最先飞起来的"猪"?</p>
+								<p class="p2">
+									<span>￥80</span>
+								</p>
+								<div class="p3">
+									<div>
+										<p><span>5.23日 周一 12.30-13.30</span></p>
+										<p><span>如是大阶梯</span></p>
+									</div>
+
+									<div class="signUp">
+										<a href="#">免费报名</a>
+									</div>
+
+								</div>
+							</div>
+						</div>
+						<div class="first-bottom">
+							<div class="first-bottomCon">
+								<div class="first-bottomLeft">
+									<div class="picBox">
+										<img src="images/img1.png" alt="">
+									</div>
+
+								</div>
+								<div class="first-bottomRight">
+									<p>本场嘉宾：孟克</p>
+									<p>百度问咖2016年度金咖,百度BIT技术学院金牌讲师,百度金融fintech业务拓展负责人.</p>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="twoBox">
+						<div class="first-top">
+							<div class="first-topLeft">
+								<img src="images/pic1.png" alt="">
+							</div>
+							<div class="first-topRight">
+								<h4>
+				            如是咖啡沙龙第四期
+				          </h4>
+								<p class="p1">站在时代的风口浪尖,谁将会是那只能够最先飞起来的"猪"?</p>
+								<p class="p2">
+									<span>&nbsp;</span>
+								</p>
+								<div class="p3">
+									<div>
+										<p><span>5.23日 周一 12.30-13.30</span></p>
+										<p><span>海信咖啡区</span></p>
+									</div>
+									<div class="signUp">
+										<a href="#" style="border: 1px solid #dcdcdc;color: #ffffff;background:#dcdcdc ;">已报名</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+					<li class="threeBox">
+						<div class="first-top">
+							<div class="first-topLeft">
+								<img src="images/pic3.png" alt="">
+							</div>
+							<div class="first-topRight">
+								<h4>
+              如是咖啡沙龙第四期
+            </h4>
+								<p class="p1">站在时代的风口浪尖,谁将会是那只能够最先飞起来的"猪"?</p>
+								<p class="p2">
+									<span>&nbsp;</span>
+								</p>
+								<div class="p3">
+									<div>
+										<p><span>5.23日 周一 12.30-13.30</span></p>
+										<p><span>海信咖啡区</span></p>
+									</div>
+									<div class="signUp">
+										<a href="#">已报名</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</section>
+
+		</div>
+
+	</body>
+	<script>
+		window.onload = function() {
+			var activeBtn = $(".nav-div").find("li");
+			var navPic = $(".nav-div").children().find("img").attr("src");
+			var str = "";
+			var DropownBoxLeft = 0;
+			var str2 = ""
+			var arr = [];
+
+			for(var i = 0; i < activeBtn.length; i++) {
+				(function(i) {
+					activeBtn[i].addEventListener('touchstart', function(event) {
+						var j = i + 1;
+						if($(this).index() == i) {
+
+							//nav图标展开合上
+							if(navPic == "images/close.gif") {
+								$(".nav-div").children().find("img").attr("src", "images/close.gif")
+								$(this).find("img").attr("src", "images/more.png")
+								$(".Drop-downBox").css("top", "0");
+								navPic = $(this).find("img").attr("src")
+
+								//ajax事件
+								$.getJSON("js/index" + j + ".json", function(data) {
+									//					console.log(data)
+
+									$.each(data, function(index, data) {
+											console.log(data.id)
+										str += "<ul>" +
+											"<li data-id='"+data.id+"'><a href=\"detail.html\" >" + data.huodong1 + "</a></li>" +
+											"<li data-id='"+data.id+"'><a href=\"detail.html\">" + data.huodong2 + "</a></li>" +
+											"<li data-id='"+data.id+"'><a href=\"detail.html\">" + data.huodong3 + "</a></li>" +
+											"<li class=\"last\" data-id='"+data.id+"'><a href=\"detail.html\">" + data.huodong4 + "</a></li>" +
+											"</ul>";
+									})
+
+									$(".Drop-downBox").html(str);
+									$(".Drop-downBox").find("ul").find("li").eq(0).css("border-bottom", "3px solid #c6a570");
+
+									//mouchmove
+									var DropdownBoxLi = $(".Drop-downBox").find("ul").find("li");
+
+									//展开栏里的move事件
+									for(var i = 0; i < DropdownBoxLi.length; i++) {
+										(function(i) {
+											DropdownBoxLi[i].addEventListener('touchmove', function(event) {
+												
+												var xqStorage = $(this).attr("data-id");
+												console.log(xqStorage)
+												  var storage=window.sessionStorage;
+            	  								 storage.setItem("activeCon",""+xqStorage+"");
+//													window.location.href = "detail.html";
+
+												DropdownBoxLi.css("border-bottom", "1px solid #e5e5e5")
+												DropdownBoxLi.children().css("color", "#4a4a4a")
+
+												$(".allActivity").css("border-bottom", "1px solid #e5e5e5!important")
+												$(this).css("border-bottom", "3px solid #c6a570")
+												$(this).children().css("color", "#c6a570")
+												if($(this).attr("class") == "allActivity") {
+													$(this).css("border-bottom", "3px solid #d8b88f!important")
+												}
+											})
+										})(i)
+
+									}
+									//展开栏里的move事件结束
+								});
+							} else {
+								str = ""
+								$(this).find("img").attr("src", "images/close.gif")
+								$(".Drop-downBox").css("top", "-4rem")
+								navPic = $(this).find("img").attr("src")
+							}
+							//nav图标展开合上结束
+
+						}
+					})
+
+				})(i);
+			}
+
+		}
+
+		function tishi(content, url) {
+			var html = '<div class="xiaoxi none" id="msg" style="display: flex;flex-direction: column;height:1.5rem;background:#4D4D4D;z-index:9999;left: 5%;width: 90%;border-radius: 30px;position: fixed;padding: 0.5rem;top:35%;opacity: 0.8;"> <p class="msg" style="color: #fff;text-align: center;font-size: 0.24rem;"></p></div>';
+			$(document.body).append(html);
+			$("#msg").show();
+			$(".msg").html(content);
+			if(url) {
+				window.setTimeout("location.href='" + url + "'", 3500);
+			} else {
+				setTimeout(function(){
+					$("#msg").remove();
+					$(".zhengzhao1").css("display","none");
+				}, 1500);
+			}
+		}
+		var signUp1 = document.getElementsByClassName("signUp")
+		for(var l = 0; l < signUp1.length; l++) {
+			touchEvent.tap(signUp1[l], function() {
+				$(".zhengzhao1").css("display","block");
+				tishi('预约成功');
+			})
+		}
+	</script>
+
+</html>
